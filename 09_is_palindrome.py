@@ -21,3 +21,10 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+
+    lowercase_phrase = phrase.lower().replace(' ','')
+    phrase_list = list(lowercase_phrase)
+    phrase_list.reverse()
+    flipped_phrase = ''.join(phrase_list)
+
+    return lowercase_phrase == flipped_phrase
