@@ -17,3 +17,20 @@ class SerialGenerator:
     >>> serial.generate()
     100
     """
+    def __init__(self, start):
+        """Construct serial generator starting from
+        'start' value while also initializing the counter"""
+        self.start = start
+        self.counter = 0
+        
+
+    def generate(self):
+        """After counting how many times 'generate'
+        executed, return  addition of count and starting number"""
+        self.counter += 1
+        return self.start + self.counter - 1
+
+    def reset(self):
+        """Reset counter to zero"""
+        self.counter = 0
+        
