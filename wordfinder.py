@@ -2,7 +2,19 @@ import random
 
 
 class WordFinder:
-    """Word Finder: finds random words from a dictionary."""
+    """Word Finder: finds random words from a dictionary.
+    
+    >>> word = WordFinder('words.txt')
+    9 words read
+    >>> word.random() in word.words
+    True
+    >>> word = SpecialWordFinder('words.txt')
+    4 words read
+    >>> word.random() in word.words
+    True
+    
+    
+    """
 
     def __init__(self, file_path, nomsg = False):
 

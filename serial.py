@@ -22,7 +22,9 @@ class SerialGenerator:
         'start' value while also initializing the counter"""
         self.start = start
         self.counter = 0
-        
+    
+    def __repr__(self):
+        return f"Generates unique serial numbers starting with {self.start}"
 
     def generate(self):
         """After counting how many times 'generate'
